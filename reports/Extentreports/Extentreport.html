@@ -1,0 +1,2199 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 27, 2020 10:19:53 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.2</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@ProductStore</a></li>
+					<li><a href='#'>@TC01_ProductStore</a></li>
+					<li><a href='#'>@TC02_ProductStore</a></li>
+					<li><a href='#'>@TC03_ProductStore</a></li>
+					<li><a href='#'>@TC04_ProductStore</a></li>
+					<li><a href='#'>@TC05_ProductStore</a></li>
+					<li><a href='#'>@TC06_ProductStore</a></li>
+					<li><a href='#'>@TC07_ProductStore</a></li>
+					<li><a href='#'>@TC08_ProductStore</a></li>
+					<li><a href='#'>@TC09_ProductStore</a></li>
+					<li><a href='#'>@TC10_ProductStore</a></li>
+					<li><a href='#'>@TC11_ProductStore</a></li>
+					<li><a href='#'>@TC12_ProductStore</a></li>
+					<li><a href='#'>@TC13_ProductStore</a></li>
+					<li><a href='#'>@TC14_ProductStore</a></li>
+					<li><a href='#'>@TC15_ProductStore</a></li>
+					<li><a href='#'>@TC16_ProductStore</a></li>
+					<li><a href='#'>@TC17_ProductStore</a></li>
+					<li><a href='#'>@TC18_ProductStore</a></li>
+					<li><a href='#'>@TC19_ProductStore</a></li>
+					<li><a href='#'>@TC20_ProductStore</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='95%'><span class='strong'>19</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='5%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='98.551%'><span class='strong'>68</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='1.449%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>ProductStore  Website</span>
+						<span class='test-time'>Mar 27, 2020 10:19:53 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 30s+577ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Signup in the ProductStore</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC01_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Signup in the ProductStore</span>
+			
+				<ul class='steps'>
+					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given when the user launch the chrome and application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='5' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks on signup link</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='6' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user enters sudhakar321 and sudhakar321</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='7' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user clicks signup button</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='8' status='pass'>
+	<span class='duration right label'>0h 0m 20s+870ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Signup in with duplicate details in the ProductStore</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='9' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC02_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Signup in with duplicate details in the ProductStore</span>
+			
+				<ul class='steps'>
+					<li test-id='10' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launch the chrome and application ,duplicate</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='11' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks on signup link ,duplicate</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user enters venkateswara reddy,venkateswara reddy ,duplicate</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='13' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user clicks signup button ,duplicate</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='14' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@TC03_ProductStore</span>
+	</div>
+	<span class='duration right label'>0h 0m 20s+953ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Signup without entering any details</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='15' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given by launching the chrome and website</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='16' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When by clicking on signup link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='17' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then without entering username,password,click signup button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='18' status='pass'>
+	<span class='duration right label'>0h 0m 29s+265ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Login in the ProductStore</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='19' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC04_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Login in the ProductStore</span>
+			
+				<ul class='steps'>
+					<li test-id='20' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user launch the chrome application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='21' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user open the ProductStore Home page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='22' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user login using naveen and naveen</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='23' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on the login button user nagivate to the next page</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='24' status='pass'>
+	<span class='duration right label'>0h 0m 28s+57ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Login in the ProductStore using Invalid details</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='25' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC05_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Login in the ProductStore using Invalid details</span>
+			
+				<ul class='steps'>
+					<li test-id='26' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if user launch the chrome application and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='27' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When if user open the ProductStore Home page and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='28' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then if user login using  Invalid venky7 and venky1234 and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='29' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on the login button, user  should not nagivate to the next page</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='30' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@TC06_ProductStore</span>
+	</div>
+	<span class='duration right label'>0h 0m 23s+97ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Login in the ProductStore without details</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='31' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given when user launches the chrome application and</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='32' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When when user opens the ProductStore Home page and</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='33' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then by clicking on the login button user  should not nagivate to the next page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='34' status='pass'>
+	<span class='duration right label'>0h 0m 24s+391ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Login in the ProductStore with username only</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='35' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC07_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Login in the ProductStore with username only</span>
+			
+				<ul class='steps'>
+					<li test-id='36' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given when user launches the chrome application then</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='37' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When when user opens the ProductStore Home page then</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='38' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then by entering only naveen and clicking login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='39' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then user  should not nagivate to the next page</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='40' status='pass'>
+	<span class='duration right label'>0h 0m 24s+555ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Login in the ProductStore with password only</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='41' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@ProductStore</span>
+				<span class='category label white-text'>@TC08_ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Login in the ProductStore with password only</span>
+			
+				<ul class='steps'>
+					<li test-id='42' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if user launches the chrome application then</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='43' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When if user opens the ProductStore Home page then</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='44' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then by entering only naveen and clicking login button,</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='45' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then user  should not nagivate to the next page,should remain in same page</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='46' status='pass'>
+	<span class='duration right label'>0h 1m 14s+79ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add each item to the cart</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='47' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC09_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add each item to the cart</span>
+			
+				<ul class='steps'>
+					<li test-id='48' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launch the website and login naveen and naveen and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='49' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user adds the items</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='50' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on cart and check if the items ared added or not</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='51' status='pass'>
+	<span class='duration right label'>0h 1m 44s+427ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add all phones  to the cart</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='52' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC10_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add all phones  to the cart</span>
+			
+				<ul class='steps'>
+					<li test-id='53' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the website is launched  and  login 15121036 and 15121036 and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='54' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user adds all phones</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='55' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on cart and check all the phones are added or not</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='56' status='pass'>
+	<span class='duration right label'>0h 1m 35s+980ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add all laptops to the cart</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='57' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC11_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add all laptops to the cart</span>
+			
+				<ul class='steps'>
+					<li test-id='58' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the website is launched , login 844872 and 844872 and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='59' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user adds all laptops</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='60' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on cart and check all the laptops are added or not</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='61' status='pass'>
+	<span class='duration right label'>0h 0m 52s+119ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add all monitors to the cart</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='62' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC12_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add all monitors to the cart</span>
+			
+				<ul class='steps'>
+					<li test-id='63' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the website is launched , login venkatesh.reddy679 and venkatesh.reddy679 and then</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='64' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user adds all monitors</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='65' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on cart and check all the monitors are added or not</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='66' status='pass'>
+	<span class='duration right label'>0h 0m 36s+711ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add items to the cart and place order</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='67' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC13_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add items to the cart and place order</span>
+			
+				<ul class='steps'>
+					<li test-id='68' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launch the website and login naveen , naveen  and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='69' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks on cart and  count no of items and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='70' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on place order then verify the purchase</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='71' status='pass'>
+	<span class='duration right label'>0h 0m 35s+304ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add all phones to the cart and place order</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='72' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC14_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add all phones to the cart and place order</span>
+			
+				<ul class='steps'>
+					<li test-id='73' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launch the website , login using 15121036 , 15121036  and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='74' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks on cart and  count no of phones and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='75' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on place order and verify the purchase by checking name of customer</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='76' status='pass'>
+	<span class='duration right label'>0h 0m 34s+412ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add all laptops to the cart and place order</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='77' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC15_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add all laptops to the cart and place order</span>
+			
+				<ul class='steps'>
+					<li test-id='78' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launch the website then login using 844872 and 844872  and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='79' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks on cart and  count no of laptops and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='80' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on place order then verify the purchase by checking name of customer</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='81' status='pass'>
+	<span class='duration right label'>0h 0m 34s+772ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Add all monitors to the cart and place order</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='82' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC16_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Add all monitors to the cart and place order</span>
+			
+				<ul class='steps'>
+					<li test-id='83' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launch the website and then login using venkatesh.reddy679 and venkatesh.reddy679  and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='84' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks on cart and  count no of monitors and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='85' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then by clicking on place order then verify the purchase by checking name of customer</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='86' status='pass'>
+	<span class='duration right label'>0h 0m 55s+200ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">do not add items to the cart and place order</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='87' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@ProductStore</span>
+				<span class='category label white-text'>@TC17_ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">do not add items to the cart and place order</span>
+			
+				<ul class='steps'>
+					<li test-id='88' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if the user launches the website and clicks login naveen and naveen and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='89' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user click on cart and  count number of items and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='90' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then click on place order and then  verify the purchase</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='91' status='pass'>
+	<span class='duration right label'>0h 0m 31s+352ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">enter email,name,message and click send</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='92' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC18_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">enter email,name,message and click send</span>
+			
+				<ul class='steps'>
+					<li test-id='93' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user launch the application and login naveen and naveen into the application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='94' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When the user clicks the contact link</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='95' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user enters contact email</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='96' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the user enters contact name</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='97' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then user enters message and click submit button</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='98' status='pass'>
+	<span class='duration right label'>0h 0m 31s+892ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">enter email,name,message and click cancel</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='99' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC19_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">enter email,name,message and click cancel</span>
+			
+				<ul class='steps'>
+					<li test-id='100' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given if user launch the application and login naveen and naveen into the application and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='101' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When if user clicks the contact link and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='102' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then if user enters contact email and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='103' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then if user enters contact name and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='104' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then user enters message then click cancel button</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='105' status='fail'>
+	<span class='duration right label'>0h 0m 29s+219ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">verify the title of the webapplication</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='106' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@TC20_ProductStore</span>
+				<span class='category label white-text'>@ProductStore</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">verify the title of the webapplication</span>
+			
+				<ul class='steps'>
+					<li test-id='107' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given launching the application and login naveen and naveen into the application and</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='108' class='node when fail' status='fail'><b>When</b>
+						<span class="bdd-step-name">When the user is on home page,take out the title and compare</span>
+							<div class='pre'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.149)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'DESKTOP-G2J1RLB', ip: '192.168.43.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7469ac8a2787718b6cb1453b6a26a754
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.utilities.WrapperClass.click_logOut(WrapperClass.java:78)
+	at com.testCases.Title_TestCase.after(Title_TestCase.java:30)
+	at ✽.When the user is on home page,take out the title and compare(./src/main/resources/feature/testcase.feature:199)
+</pre></div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>17</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 17</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:19:53 AM</td>
+										<td class='linked' test-id='1'>ProductStore  Website</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:19:54 AM</td>
+										<td class='linked' test-id='3'>ProductStore  Website.Signup in the ProductStore.Signup in the ProductStore</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:20:24 AM</td>
+										<td class='linked' test-id='9'>ProductStore  Website.Signup in with duplicate details in the ProductStore.Signup in with duplicate details in the ProductStore</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:21:06 AM</td>
+										<td class='linked' test-id='19'>ProductStore  Website.Login in the ProductStore.Login in the ProductStore</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:21:35 AM</td>
+										<td class='linked' test-id='25'>ProductStore  Website.Login in the ProductStore using Invalid details.Login in the ProductStore using Invalid details</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:22:26 AM</td>
+										<td class='linked' test-id='35'>ProductStore  Website.Login in the ProductStore with username only.Login in the ProductStore with username only</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:22:51 AM</td>
+										<td class='linked' test-id='41'>ProductStore  Website.Login in the ProductStore with password only.Login in the ProductStore with password only</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:23:15 AM</td>
+										<td class='linked' test-id='47'>ProductStore  Website.Add each item to the cart.Add each item to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:24:29 AM</td>
+										<td class='linked' test-id='52'>ProductStore  Website.Add all phones  to the cart.Add all phones  to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:26:14 AM</td>
+										<td class='linked' test-id='57'>ProductStore  Website.Add all laptops to the cart.Add all laptops to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:27:50 AM</td>
+										<td class='linked' test-id='62'>ProductStore  Website.Add all monitors to the cart.Add all monitors to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:28:42 AM</td>
+										<td class='linked' test-id='67'>ProductStore  Website.Add items to the cart and place order.Add items to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:29:19 AM</td>
+										<td class='linked' test-id='72'>ProductStore  Website.Add all phones to the cart and place order.Add all phones to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:29:54 AM</td>
+										<td class='linked' test-id='77'>ProductStore  Website.Add all laptops to the cart and place order.Add all laptops to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:30:28 AM</td>
+										<td class='linked' test-id='82'>ProductStore  Website.Add all monitors to the cart and place order.Add all monitors to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:31:03 AM</td>
+										<td class='linked' test-id='87'>ProductStore  Website.do not add items to the cart and place order.do not add items to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:31:58 AM</td>
+										<td class='linked' test-id='92'>ProductStore  Website.enter email,name,message and click send.enter email,name,message and click send</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:32:30 AM</td>
+										<td class='linked' test-id='99'>ProductStore  Website.enter email,name,message and click cancel.enter email,name,message and click cancel</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 27, 2020 10:33:02 AM</td>
+										<td class='linked' test-id='106'>ProductStore  Website.verify the title of the webapplication.verify the title of the webapplication</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC01_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:19:54 AM</td>
+										<td class='linked' test-id='3'>ProductStore  Website.Signup in the ProductStore.Signup in the ProductStore</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC02_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:20:24 AM</td>
+										<td class='linked' test-id='9'>ProductStore  Website.Signup in with duplicate details in the ProductStore.Signup in with duplicate details in the ProductStore</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC03_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:20:45 AM</td>
+										<td class='linked' test-id='14'>ProductStore  Website.Signup without entering any details</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC04_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:21:06 AM</td>
+										<td class='linked' test-id='19'>ProductStore  Website.Login in the ProductStore.Login in the ProductStore</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC05_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:21:35 AM</td>
+										<td class='linked' test-id='25'>ProductStore  Website.Login in the ProductStore using Invalid details.Login in the ProductStore using Invalid details</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC06_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:22:03 AM</td>
+										<td class='linked' test-id='30'>ProductStore  Website.Login in the ProductStore without details</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC07_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:22:26 AM</td>
+										<td class='linked' test-id='35'>ProductStore  Website.Login in the ProductStore with username only.Login in the ProductStore with username only</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC08_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:22:51 AM</td>
+										<td class='linked' test-id='41'>ProductStore  Website.Login in the ProductStore with password only.Login in the ProductStore with password only</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC09_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:23:15 AM</td>
+										<td class='linked' test-id='47'>ProductStore  Website.Add each item to the cart.Add each item to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC10_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:24:29 AM</td>
+										<td class='linked' test-id='52'>ProductStore  Website.Add all phones  to the cart.Add all phones  to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC11_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:26:14 AM</td>
+										<td class='linked' test-id='57'>ProductStore  Website.Add all laptops to the cart.Add all laptops to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC12_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:27:50 AM</td>
+										<td class='linked' test-id='62'>ProductStore  Website.Add all monitors to the cart.Add all monitors to the cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC13_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:28:42 AM</td>
+										<td class='linked' test-id='67'>ProductStore  Website.Add items to the cart and place order.Add items to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC14_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:29:19 AM</td>
+										<td class='linked' test-id='72'>ProductStore  Website.Add all phones to the cart and place order.Add all phones to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC15_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:29:54 AM</td>
+										<td class='linked' test-id='77'>ProductStore  Website.Add all laptops to the cart and place order.Add all laptops to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC16_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:30:28 AM</td>
+										<td class='linked' test-id='82'>ProductStore  Website.Add all monitors to the cart and place order.Add all monitors to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC17_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:31:03 AM</td>
+										<td class='linked' test-id='87'>ProductStore  Website.do not add items to the cart and place order.do not add items to the cart and place order</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC18_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:31:58 AM</td>
+										<td class='linked' test-id='92'>ProductStore  Website.enter email,name,message and click send.enter email,name,message and click send</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC19_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:32:30 AM</td>
+										<td class='linked' test-id='99'>ProductStore  Website.enter email,name,message and click cancel.enter email,name,message and click cancel</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC20_ProductStore</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 27, 2020 10:33:02 AM</td>
+										<td class='linked' test-id='106'>ProductStore  Website.verify the title of the webapplication.verify the title of the webapplication</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.StaleElementReferenceException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 27, 2020 10:33:19 AM</td>
+                                                        <td class='linked' test-id='108'>ProductStore  Website.verify the title of the webapplication.verify the title of the webapplication.When the user is on home page,take out the title and compare</td>
+                                                        <td><pre><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=80.0.3987.149)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'DESKTOP-G2J1RLB', ip: '192.168.43.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7469ac8a2787718b6cb1453b6a26a754
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.utilities.WrapperClass.click_logOut(WrapperClass.java:78)
+	at com.testCases.Title_TestCase.after(Title_TestCase.java:30)
+	at ✽.When the user is on home page,take out the title and compare(./src/main/resources/feature/testcase.feature:199)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>20</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>69</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 27, 2020 10:19:53 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 27, 2020 10:33:31 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>817,438ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@ProductStore</td>
+							<td>17</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									89.474%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC01_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC02_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC03_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC04_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC05_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC06_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC07_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC08_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC09_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC10_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC11_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC12_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC13_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC14_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC15_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC16_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC17_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC18_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC19_ProductStore</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC20_ProductStore</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 19,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 1,
+				
+				passGrandChild: 68,
+				failGrandChild: 1,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 1,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
